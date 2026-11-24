@@ -8,21 +8,21 @@ public final class StringUtils {
     }
 
     public static void main(final String[] args) {
-        Scanner input = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String inputString = input.nextLine();
+        final String inputString = scanner.nextLine();
 
-        String reversed = reverseString(inputString);
+        final String reversed = reverseString(inputString);
         System.out.println(reversed);
     }
 
-    public static String reverseString(String inputString) {
-        char[] stringChars = inputString.toCharArray();
+    public static String reverseString(final String inputString) {
+        final char[] stringChars = inputString.toCharArray();
         int left = 0;
         int right = stringChars.length - 1;
 
         while (left < right) {
-            char temp = stringChars[left];
+            final char temp = stringChars[left];
             stringChars[left] = stringChars[right];
             stringChars[right] = temp;
             left++;
