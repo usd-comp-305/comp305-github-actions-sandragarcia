@@ -8,37 +8,65 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StringUtilsTest {
     @Test
     void reverseStringStringIsEmpty() {
-        String str = "";
+        final String str = "";
 
-        String expectedResult = "";
-        String actualResult = StringUtils.reverseString(str);
+        final String expectedResult = "";
+        final String actualResult = StringUtils.reverseString(str);
 
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseStringStringIsNotEmpty() {
-    String str = "hello";
-        String expectedResult = "olleh";
-        String actualResult = StringUtils.reverseString(str);
+        final String str = "hello";
+        final String expectedResult = "olleh";
+        final String actualResult = StringUtils.reverseString(str);
 
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseStringStringIsPalindrome() {
-        String str = "level";
-        String expectedResult = "level";
-        String actualResult = StringUtils.reverseString(str);
+        final String str = "level";
+        final String expectedResult = "level";
+        final String actualResult = StringUtils.reverseString(str);
 
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseStringStringHasCaps() {
-        String str = "Hello World";
-        String expectedResult = "dlroW olleH";
+        final String str = "Hello World";
+        final String expectedResult = "dlroW olleH";
+        final String actualResult = StringUtils.reverseString(str);
 
-        String actualResult = StringUtils.reverseString(str);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void reverseStringStringIsSingleChar() {
+        final String str = "i";
+        final String expectedResult = "i";
+        final String actualResult = StringUtils.reverseString(str);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void reverseStringStringIsSpecialChar() {
+        final String str = "!";
+        final String expectedResult = "!";
+        final String actualResult = StringUtils.reverseString(str);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void reverseStringStringisWhiteSpace() {
+        final String str = "   ";
+        final String expectedResult = "   ";
+        final String actualResult = StringUtils.reverseString(str);
+
+        assertEquals(expectedResult, actualResult);
     }
 }
