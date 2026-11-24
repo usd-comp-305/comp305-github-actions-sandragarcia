@@ -1,5 +1,6 @@
 package edu.sandiego.cs.comp305;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public final class StringUtils {
@@ -8,7 +9,7 @@ public final class StringUtils {
     }
 
     public static void main(final String[] args) {
-        final Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
         System.out.print("Enter a string: ");
         final String inputString = scanner.nextLine();
 
