@@ -21,7 +21,6 @@ dependencies {
 checkstyle {
     configFile = file("checkstyle/checkstyle.xml")
     toolVersion = '10.12.5'
-    sourceSets = [sourceSets.main, sourceSets.test]
     ignoreFailures = false
 }
 spotbugs {
